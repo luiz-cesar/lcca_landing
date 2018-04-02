@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        
+        <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css" type="text/css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="jquery.fullpage.css" />
+        <script type="text/javascript" src="jquery.fullpage.js"></script>
+    </head>
+    <body>
+        <div id="fullpage">
+            <div class="section active">
+                <div class="fullscreen">
+                    <div id="part1">                        
+                        <div class="valignmiddle">
+                            <div class="col-md-12">
+                                <div class="text-center">
+                                    <h1>LUIZ CESAR</h1>
+                                    <div class="col-md-12">
+                                        <div class="col-md-8 col-md-offset-2">
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <h3>GRADUANDO EM CIÊNCIA DA COMPUTAÇÃO</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="fullscreen">
+                    <div id="part2">
+                        <div class="valignmiddle">
+                            <div class="text-center">
+                                <img src="LZwhite.svg" width="100vw"></img>
+                            </div>
+                        </div>
+                        <!--<div class="col-md-12">-->
+                        <!--    <div class="row">-->
+                        <!--        <div class="text-center">-->
+                        <!--            <h2>SOBRE</h2>-->
+                        <!--        </div>-->
+                        <!--    </div>-->
+                        <!--    <div class="col-md-6 col-md-offset-3">-->
+                        <!--        <ul>-->
+                        <!--            <li>-->
+                        <!--                <div class="card">-->
+                        <!--                    <div class="row">-->
+                        <!--                        <div class="text-center">-->
+                        <!--                                Assessor de Comunicação na ECOMP - Empresa Júnior de Informática da UFPR-->
+                        <!--                        </div>-->
+                        <!--                    </div>-->
+                        <!--                </div>-->
+                        <!--            </li>-->
+                        <!--            <li>-->
+                        <!--                <div class="card">-->
+                        <!--                    <div class="row">-->
+                        <!--                        <div class="text-center">-->
+                        <!--                                Desenvolvedor na ECOMP - Empresa Júnior de Informática da UFPR-->
+                        <!--                        </div>-->
+                        <!--                    </div>-->
+                        <!--                </div>-->
+                        <!--            </li>-->
+                        <!--        </ul>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+                    </div>    
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            $(document).ready(function() {
+    	        $('#fullpage').fullpage();
+            });
+            
+            
+
+            $(function() {
+            
+                $('.valignmiddle').each(function() {
+            
+                    $(this).parent().css('position', 'relative');
+                    $(this).css('position', 'absolute');
+                    $(this).css('top', '50%');
+                    $(this).css('left', '0px');
+                    $(this).css('width', '100%');
+            
+                });
+            
+                $(window).resize(function() {
+            
+                    var thisheight = Math.round(parseInt($('.valignmiddle').outerHeight()) / 2);
+                    $('.valignmiddle').css('margin-top', '-' + thisheight + 'px');
+            
+                    if(parseInt($('.valignmiddle').outerHeight()) > parseInt($('.valignmiddle').parent().outerHeight())) {
+            		
+                        $('.valignmiddle').parent().outerHeight($('.valignmiddle').outerHeight());
+            		
+                    }
+            
+                }).trigger('resize');
+            
+            });
+
+
+        </script>
+    </body>
+</html>
