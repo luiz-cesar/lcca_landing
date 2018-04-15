@@ -3,17 +3,33 @@ body {
     color: white;
 }
 
+a {
+    text-decoration: none;
+    outline:none
+}
+
 h1 {
     font-size: 6em;
 }
 
-h2 {
-    
+.display-table {
+    display: table;
+    table-layout: fixed;
 }
 
-h2, h3 {
+.display-cell {
+    vertical-align: middle;
+    display: table-cell;
+    float: none;
+}
+
+.page-title {
     letter-spacing: 0.8vw;
     margin-right: -0.8vw;
+}
+
+.padding-top-2 {
+    margin-top: 2.5em;
 }
 
 .fullscreen {
@@ -35,30 +51,65 @@ h2, h3 {
 }
 
 
-#part2 {
+#part2, #part3, #part4, #part5, #part6 {
     background-color:  #2b2b2b;
     height: 100%;
     /*padding-top: 2vw;*/
 }
 
-#part2 .card {
-    background-color: #e0e0e0;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: 0.3s;
-    border-radius: 5px;
-    padding: 1.5%;
+#logo {
+    padding-top: 3em;
 }
 
-
-#part2 ul{
-    list-style-type: none;
-    font-size: 15pt;
-    padding-left: 0;
-}
-
-#part2 li{
-    padding-top: 3%;
+#part2 button {
     color: black;
-    letter-spacing: 0.2vw;
-    margin-right: -0.2vw;
+    font-size: 1.2em;
+    letter-spacing: 0.3vw;
+    margin-right: -0.3vw;
+    width: 100%;
+    height: 4.5em;
+    background-color: white;
+    border: none;
+}
+
+#part2 button:hover {
+    background-color: #5eff8e;
+    
+}
+
+#part3 .content {
+    padding-top: 4em;
+}
+
+#part3 .box{
+    padding-top: 3em;
+    padding-bottom: 3em;
+    padding-left: 2em;
+    padding-right: 2em;
+    width: 100%;
+    border-style: solid;
+    border-color: white;
+}
+
+#part3 h3 {
+    letter-spacing: normal;
+}
+
+#part3 .circle{
+    height: 10em;
+    width: 10em;
+    background-color: white;
+    border-radius: 50%;
+}
+
+#part6 .content {
+    padding-top: 4em;
+}
+
+#part6 h3 {
+    letter-spacing: normal;
+}
+
+#part6c {
+    padding-top: 10vh;
 }
